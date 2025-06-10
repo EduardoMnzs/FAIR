@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Acesso ao Conjunto de Dados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Conjunto de Dados: Expressão Gênica em *Bacterium fantasticus* Durante Infecção</h1>
+        <p>Um Recurso de Dados FAIR</p>
+    </header>
+
+    <div class="container">
+        <main class="main-content">
+            <section id="citation">
+                <h2>Como Citar Este Conjunto de Dados</h2>
+                <blockquote>
+                    Ana Silva, Bruno Costa. (2025). Conjunto de Dados: Expressão Gênica em <i>Bacterium fantasticus</i> Durante Infecção [Conjunto de Dados]. Repositório de Dados Fictícios. 
+                    <a href="https://doi.org/10.5281/zenodo.1234567">https://doi.org/10.5281/zenodo.1234567</a>
+                </blockquote>
+            </section>
+
+            <section id="abstract">
+                <h2>Resumo</h2>
+                <p>Este conjunto de dados contém os resultados de transcriptômica (RNA-Seq) da bactéria <i>Bacterium fantasticus</i>, coletada 24 horas após a infecção em um modelo de macrófagos. O objetivo foi identificar genes diferencialmente expressos que contribuem para a sobrevivência do patógeno no ambiente intracelular.</p>
+            </section>
+
+            <section id="downloads">
+                <h2>Acesso aos Arquivos</h2>
+                <p class="info-note">Os metadados estão sempre abertos. O acesso aos dados brutos pode requerer autenticação.</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome do Arquivo</th>
+                            <th>Formato (Interoperabilidade)</th>
+                            <th>Descrição</th>
+                            <th>Download</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>dados_expressao.csv</td>
+                            <td>CSV (Legível por Humanos/Máquinas)</td>
+                            <td>Tabela com contagens de genes normalizadas. Fácil de abrir em planilhas.</td>
+                            <td><a href="#" class="download-btn">Baixar</a></td>
+                        </tr>
+                        <tr>
+                            <td>metadata_completo.jsonld</td>
+                            <td>JSON-LD (Rico para Máquinas)</td>
+                            <td>Metadados completos com links para ontologias. Ideal para automação.</td>
+                            <td><a href="#" class="download-btn">Baixar</a></td>
+                        </tr>
+                        <tr>
+                            <td>protocolo_experimental.pdf</td>
+                            <td>PDF</td>
+                            <td>Descrição detalhada dos métodos e protocolos utilizados.</td>
+                            <td><a href="#" class="download-btn">Baixar</a></td>
+                        </tr>
+                        <tr>
+                            <td>sequencias_brutas.fastq.gz</td>
+                            <td>FASTQ (Padrão de Domínio)</td>
+                            <td>Dados brutos de sequenciamento. (Acesso Restrito)</td>
+                            <td><a href="#" class="download-btn restricted">Requer Autenticação</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="provenance">
+                <h2>Proveniência e Métodos</h2>
+                <p>Os dados foram gerados em um sequenciador Illumina NovaSeq 6000. O alinhamento foi feito com o software STAR (v2.7.9a) contra o genoma de referência GCF_12345.6. A análise de expressão diferencial foi realizada com o pacote DESeq2 (v1.34.0) em R.</p>
+                 <p><strong>Publicação associada:</strong> <a href="#">Silva, A., Costa, B. (2025). <i>Jornal de Biologia Irreproduzível</i>, 10(2), 123-130.</a></p>
+            </section>
+        </main>
+
+        <aside class="sidebar">
+            <div class="metadata-box">
+                <h3>Metadados Principais</h3>
+                <ul>
+                    <li><strong>DOI:</strong> <a href="https://doi.org/10.5281/zenodo.1234567">10.5281/zenodo.1234567</a></li>
+                    <li><strong>Autores:</strong> Ana Silva, Bruno Costa</li>
+                    <li><strong>Data de Publicação:</strong> 08 de junho de 2025</li>
+                    <li><strong>Organismo:</strong> <a href="https://www.ncbi.nlm.nih.gov/taxonomy/12345" target="_blank"><i>Bacterium fantasticus</i> (NCBI:txid12345)</a></li>
+                    <li><strong>Tipo de Experimento:</strong> <a href="http://purl.obolibrary.org/obo/OBI_0000424" target="_blank">RNA-Seq Assay (OBI:0000424)</a></li>
+                    <li><strong>Palavras-chave:</strong> RNA-Seq, Infecção, Expressão Gênica, Patogênese</li>
+                </ul>
+            </div>
+
+            <div class="license-box">
+                <h3>Licença de Uso (Reusabilidade)</h3>
+                <p>
+                    <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                        <img alt="Licença Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                    </a>
+                </p>
+                <p>Este conjunto de dados está licenciado sob a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><strong>Licença Creative Commons Atribuição 4.0 Internacional</strong></a>.</p>
+                <p>Você tem a liberdade de compartilhar e adaptar, desde que dê o crédito apropriado.</p>
+            </div>
+        </aside>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 - Repositório de Dados Fictícios</p>
+    </footer>
+
+</body>
+</html>

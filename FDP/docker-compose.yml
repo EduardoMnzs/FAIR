@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  fdp:
+    image: fairdata/fairdatapoint:1.17
+    depends_on:
+      - mongo
+    ports:
+      - "8080:80"
+    environment:
+      - FDP_INSTANCE_CLIENTURL=http://localhost/
+      - FDP_INSTANCE_PERSISTENTURL=http://localhost:8080/
+      - FDP_METADATA_REPOSITORY_TITLE=Meu FAIR Data Point
+      - FDP_METADATA_PUBLISHER_NAME=Minha Organização
+
+  fdp-client:
+    image: fairdata/fairdatapoint-client:latest
+    ports:
+      - "80:80"
+    depends_on:
+      - fdp
+    environment:
+      - FDP_HOST=fdp
+
+  mongo:
+    image: mongo:4.0.12

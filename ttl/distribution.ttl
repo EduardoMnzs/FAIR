@@ -1,0 +1,15 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<> a dcat:Resource, dcat:Distribution ;
+    dct:title "Amostras de Corais em formato CSV" ;
+    dcat:version "1.0" ;
+
+    # A linha mais importante: o link para o arquivo de dados real!
+    dcat:downloadURL <https://exemplo.com/meus_dados/corais_2024.csv> ;
+
+    # O tipo de mídia do arquivo
+    dcat:mediaType "text/csv" ;
+
+    # O pai desta distribuição é o Dataset que você acabou de publicar
+    dct:isPartOf <http://localhost:8080/dataset/uuid_do_novo_dataset> .

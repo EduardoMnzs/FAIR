@@ -1,0 +1,156 @@
+/* Configurações Globais */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 30px;
+}
+
+/* Layout Principal e Barra Lateral */
+.main-content {
+    flex: 3; /* O conteúdo principal ocupa 3/4 do espaço */
+}
+
+.sidebar {
+    flex: 1; /* A barra lateral ocupa 1/4 do espaço */
+}
+
+/* Cabeçalho e Rodapé */
+header {
+    background-color: #005a9c;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 30px;
+}
+
+/* Estilo das Seções */
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #005a9c;
+    border-bottom: 2px solid #f4f4f4;
+    padding-bottom: 10px;
+}
+
+/* Caixas de Metadados e Licença */
+.metadata-box, .license-box {
+    background-color: #eaf3fb;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border-left: 5px solid #007bff;
+}
+
+.metadata-box h3, .license-box h3 {
+    margin-top: 0;
+    color: #005a9c;
+}
+
+.metadata-box ul {
+    list-style: none;
+    padding: 0;
+}
+
+.metadata-box ul li {
+    margin-bottom: 10px;
+}
+
+.license-box p {
+    margin-bottom: 10px;
+}
+
+/* Tabela de Downloads */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.download-btn:hover {
+    background-color: #218838;
+}
+
+.download-btn.restricted {
+    background-color: #ffc107;
+    color: #333;
+}
+
+/* Outros Estilos */
+blockquote {
+    border-left: 4px solid #ccc;
+    padding-left: 15px;
+    margin: 20px 0;
+    font-style: italic;
+    color: #555;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.info-note {
+    background-color: #fff3cd;
+    border-left: 4px solid #ffeeba;
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+/* Responsividade para Telas Menores */
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+    }
+}
