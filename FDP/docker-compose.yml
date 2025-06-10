@@ -1,8 +1,6 @@
-version: '3.8'
-
 services:
   fdp:
-    image: fairdata/fairdatapoint:1.17
+    image: fairdata/fairdatapoint:1
     depends_on:
       - mongo
     ports:
@@ -24,3 +22,8 @@ services:
 
   mongo:
     image: mongo:4.0.12
+    volumes:
+      - fdp-database-data:/data/db
+
+volumes:
+  fdp-database-data:
