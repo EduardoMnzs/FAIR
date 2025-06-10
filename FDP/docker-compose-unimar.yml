@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  fdp:
+    image: fairdata/fairdatapoint:1.17
+    environment:
+      FDP_INSTANCE_CLIENTURL: ${FDP_INSTANCE_CLIENTURL}
+      FDP_INSTANCE_PERSISTENTURL: ${FDP_INSTANCE_PERSISTENTURL}
+      FDP_METADATA_REPOSITORY_TITLE: ${FDP_METADATA_REPOSITORY_TITLE}
+      FDP_METADATA_PUBLISHER_NAME: ${FDP_METADATA_PUBLISHER_NAME}
+    depends_on:
+      - mongo
+    networks:
+      - ingress-network
+      - default
+    labels:
+      caddy: fairdatapoint.labs.unimar.br
+      caddy.reverse_proxy: "{{upstreams 80}}"
+
+  fdp-client:
+    image: fairdata/fairdatapoint-client:latest
+    depends_on:
+      - fdp
+    environment:
+      FDP_HOST: fdp
+    networks:
+      - ingress-network
+      - default
+    labels:
+      caddy: fairdatapoint-client.labs.unimar.br
+      caddy.reverse_proxy: "{{upstreams 80}}"
+
+  mongo:
+    image: mongo:4.0.12
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - default
+
+volumes:
+  mongo-data: {}
+
+networks:
+  default:
+  ingress-network:
+    external: true
